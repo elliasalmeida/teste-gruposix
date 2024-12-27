@@ -60,7 +60,7 @@ export default async function Home() {
         <div className="text-2xl font-bold text-gray-900 mb-3">{new Intl.NumberFormat('pt-BR', { currency: 'BRL', style: 'currency'}).format(
     product.price,
   )}</div>
-        <PreOrderSheet/>
+        <PreOrderSheet product_id={product.product_id}/>
       </div>
     </div>)}
           </div>
