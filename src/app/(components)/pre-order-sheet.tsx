@@ -25,9 +25,9 @@ export function PreOrderSheet(props: PreOrderSheetProps) {
       </SheetTrigger>
       <SheetContent>
         <SheetHeader>
-          <SheetTitle>Edit profile</SheetTitle>
+          <SheetTitle>Pedido</SheetTitle>
           <SheetDescription>
-            Make changes to your profile here. Click save when you're done.
+            Insira abaixo os seus dados.
           </SheetDescription>
         </SheetHeader>
         <form action={createOrder} className="space-y-4 w-full max-w-md">
