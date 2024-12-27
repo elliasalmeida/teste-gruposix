@@ -1,5 +1,6 @@
 import { GetCheckoutDataResponse } from "@/types";
 import Image from "next/image";
+import { PreOrderSheet } from "./{components)/pre-order-sheet";
 
 export default async function Home() {
   const checkoutData = await getCheckoutData()
@@ -59,13 +60,7 @@ export default async function Home() {
         <div className="text-2xl font-bold text-gray-900 mb-3">{new Intl.NumberFormat('pt-BR', { currency: 'BRL', style: 'currency'}).format(
     product.price,
   )}</div>
-        <button className={`w-full py-2 px-4 rounded-lg font-semibold transition-colors ${
-          product.best_choice
-            ? 'bg-emerald-500 hover:bg-emerald-600 text-white'
-            : 'bg-gray-200 hover:bg-gray-300 text-gray-800'
-        }`}>
-          Comprar agora
-        </button>
+        <PreOrderSheet/>
       </div>
     </div>)}
           </div>
